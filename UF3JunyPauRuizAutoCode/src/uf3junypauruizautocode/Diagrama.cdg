@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Diagrama">
+  <ClassDiagramComponents>
+    <Class name="Institut" package="" visibility="public" xPosition="11.0" yPosition="85.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Aules" package="" visibility="public" xPosition="11.0" yPosition="240.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Alumnes" package="" visibility="public" xPosition="267.0" yPosition="231.0">
+      <Fields>
+        <Field name="dataNaixement" type="Date" visibility="private"/>
+        <Field name="codiCicle" type="String" visibility="private"/>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="cognom" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Profesors" package="" visibility="public" xPosition="524.0" yPosition="231.0">
+      <Fields>
+        <Field name="departament" type="String" visibility="private"/>
+        <Field name="carrec" type="String" visibility="private"/>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="cognom" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Ordinador" package="" visibility="public" xPosition="11.0" yPosition="408.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="estat" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="has" source="Alumnes" target="Profesors" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="has" source="Aules" target="Alumnes" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="has" source="Institut" target="Aules" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="has" source="Aules" target="Ordinador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
